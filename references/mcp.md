@@ -32,8 +32,10 @@ Each slot returns several `candidates` with links, a builder's note and a previe
 
 Search two ways:
 
-- **For the move:** describe the composition you want to find, from any industry: "headline split around a photo", "giant type cropped by the edge", "text set into a full-bleed image", "description placed off-axis under a huge headline". This is how to find the library's most striking sections.
-- **For the job:** describe the section's role and content: "pricing comparison for two plans with a clear primary action".
+- **For the move:** describe the composition you want to find, from any industry, in your own words, built from what this business has. This is how to find the library's most striking sections.
+- **For the job:** describe the section's role and this business's content.
+
+Never reuse a query from this guide or an earlier project: the same words return the same results. Set `limit: 20` (the default is 6), look past the top three, and use each website at most once per page. Send several differently worded searches for the same idea; different words reach different parts of the library.
 
 Avoid mood words alone ("modern", "premium"); they match everything. Results carry an evidence level:
 

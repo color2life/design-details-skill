@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.3.0-draft"
+  version: "1.3.1-draft"
 ---
 
 # Design Details
@@ -35,8 +35,10 @@ If the MCP is not connected, say so, explain how to add `https://designdetails.i
 
 With it connected, follow [the MCP guide](references/mcp.md). Search two ways:
 
-1. **For the move.** Search the composition itself, from any industry: "headline split around a photo", "oversized type cropped by the image", "description placed off-axis", "full-bleed photo with text set into it", "type as the image". At distinctive and extreme ambition, this search comes first. A bank can borrow from a fashion label.
+1. **For the move.** Search for a composition, from any industry. At distinctive and extreme ambition, this search comes first. A bank can borrow from a fashion label. **Write every search yourself, from this brief:** start from what only this business has (an object, a moment, a material, a habit of its customers) and describe a layout built around it, in the words of what you would see on screen. Never send a phrase copied from this skill or from an earlier project; the same words return the same references, and every page ends up looking alike.
 2. **For the job.** Use `create_page_recipe` with the brief and `slots` to cover sections that need a structural fit (pricing, booking, team).
+
+**Spread the net.** Ask for 20 results per search (`limit: 20`) and look past the top three before choosing. Use each website at most once per page. A few loud heroes match many searches; use one only if it fits this brief better than everything else you saw, and say what else you considered.
 
 **Look at the actual images.** Text, links and scores are not looking. For each strong candidate, name its **boldest move** in one line: the thing a typical site would not do. Fetch `get_section_build_blueprint` for the references you will actually build from; their measured type sizes, spacing and placement are what make a move work.
 
@@ -69,7 +71,7 @@ Make a quick visual study of each direction's opening screen and show it **besid
 A page is good when every section is designed, not only the hero. Before building, write a section plan. For each section:
 
 - **Job:** the one thing it must get across.
-- **Layout idea:** one idea of its own, taken from an inspected MCP reference (search for the move, as in step 2), with its composition study. Examples: a sentence alone with its key words lighting up; wide cards that rise and stack; tall panels where one is open and the rest are slim; a bento grid with one huge figure; one picture split by a line with the claim on it; a cut-out portrait with the quote arriving line by line; the wordmark full width.
+- **Layout idea:** one idea of its own, taken from an inspected MCP reference (search for the move, written from this section's content, as in step 2), with its composition study. The kind of idea meant: a sentence alone with its key words lighting up, or one picture split by a line with the claim on it. These show the kind; do not search for them as written.
 - **Weight:** quiet or rich.
 - **Scroll:** holds the scroll (pinned, steps through) or not.
 
