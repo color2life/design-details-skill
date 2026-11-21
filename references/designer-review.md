@@ -13,7 +13,7 @@ The reviewer is ideally a fresh helper with no memory of the build. Give it only
 
 Give each section one of four verdicts:
 
-- **Approved:** it has its own layout idea, it works, and nothing important is wrong. Leave it alone.
+- **Approved:** it does its job in the page's own language and nothing important is wrong. For the signature and supporting moments, the move is carried through; for plain sections, the type, pictures and spacing are simply good. Leave it alone.
 - **Half done:** the idea is right, but it is not carried through (the photo is a small box when the idea needs it full-bleed; the giant word is not giant enough).
 - **Weak:** it has an idea, but the wrong one for this page, or a repeat of a neighbour or of another site's section.
 - **Basic:** it is the default version (heading over equal cards, photo beside text, heading and button, row of numbers, ruled list).
@@ -36,6 +36,10 @@ A move that would fit any page is not a move. If the section needs a new layout 
 ## 5. The whole page
 
 After the sections, look at the page top to bottom and check:
+
+- **Does it feel generated?** Answer honestly, and point at the part that does: too many tricks, a category costume, the same skeleton in every section, small grey text, stand-in pictures that do not match. This question comes first.
+- **Move budget:** one signature move and at most two supporting moments. If more sections carry a device, take the weakest devices out and set those sections plainly. A good review often removes ideas rather than adding them.
+- **Flavour:** does every section wear the chosen flavour, or has a section reference brought its own look in?
 
 - **Blending neighbours:** two sections next to each other with the same shape or background, so they read as one.
 - **Rhythm:** a quiet section after every rich one; at most three sections hold the scroll.

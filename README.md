@@ -18,6 +18,7 @@ Add `https://designdetails.io/api/mcp` as a remote MCP server in your AI client.
 ## Files
 
 - `SKILL.md`: the six steps
+- `references/flavours.md`: the flavour menu the designer chooses the look from
 - `references/craft.md`, `tells.md`, `motion.md`: build rules
 - `references/review.md`, `designer-review.md`: review and designer rounds
 - `references/mcp.md`: how to use the MCP

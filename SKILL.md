@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.4.0-draft"
+  version: "1.5.0-draft"
 ---
 
 # Design Details
@@ -36,11 +36,11 @@ Ask once, in one message, at most five questions, each with a suggested answer s
 
 - **Who and what:** audience, offer, the one action a visitor should take.
 - **Material:** what is real (photos, product, logo, copy), what can use free-licensed stand-ins, and what does not exist yet.
-- **Feel:** one or two words with an edge. "Clean and modern" is not a feel.
+- **Flavour:** the page's look, chosen by the designer from a short menu with real examples. Follow [flavours](references/flavours.md): offer three flavours that could suit the brief and one wild card, each shown with two or three real websites from the MCP, and ask which one, or a mix of two. Never pick the category's default look on your own.
 - **Ambition:** *safe* (familiar, quiet), *distinctive* (one memorable move per screen; the default) or *extreme* (gallery-level: compositions a typical site would never try, of any kind above).
 - **Scope:** which sections, and whether to see directions first (default: yes).
 
-If something is skipped, state the assumption in one line and continue. Never invent facts, numbers, customers, testimonials, awards or contact details.
+Show the flavour menu in the same message as the questions. If something else is skipped, state the assumption in one line and continue. Do not start step 3 without a flavour. Never invent facts, numbers, customers, testimonials, awards or contact details.
 
 ## Step 2 — Hunt for the boldest references
 
@@ -66,12 +66,12 @@ Search again only to fill a named gap. Use at least a handful of searches for th
 
 ## Step 3 — Two directions, then stop
 
-Make two directions that **differ in kind**: two different kinds of bold from the list above, with different looks. **At most one may be type-led.** At distinctive or extreme ambition, **each direction is built around one reference's boldest move**, kept intact. Name that move in one line.
+Make two directions that **differ in kind**: two different kinds of bold from the list above. **At most one may be type-led.** Both use the **chosen flavour**; they differ in layout and in their one signature move. At distinctive or extreme ambition, **each direction is built around one reference's boldest move**, kept intact. Name that move in one line.
 
 Each direction has a **look** and a **layout**, chosen separately:
 
-- **Look:** the surface system (type pairing, palette, paper or background, how photos are treated, corners and rules), taken from one reference website's whole design with `get_website_design`.
-- **Layout:** the composition, taken from the section reference whose move it keeps. The two can come from different websites.
+- **Look:** the surface system (type pairing, palette, paper or background, how photos are treated, corners and rules) from the chosen flavour and its reference website (`get_website_design`). The same for both directions and for every section.
+- **Layout:** the composition, taken from the section reference whose move it keeps.
 
 For each direction, write a short plan first: the references (IDs and links), its kind of bold, the idea in one sentence, the move it keeps, the look and where it comes from, what changes for this business, the type and palette (four to six colours), the hero image use, and what the visitor reads first, second and third.
 
@@ -87,22 +87,30 @@ Make a quick visual study of each direction's opening screen and show it **besid
 
 ## Step 4 — Plan every section
 
-A page is good when every section is designed, not only the hero. Before building, write a section plan. For each section:
+A page is good when it is designed as one thing by one hand, not when every section has a trick. A page where every section is clever reads as generated. Before building, write a section plan.
+
+**Move budget (hard):** one **signature move** for the page (usually the hero) and at most **two supporting moments**. Every other section is plain, well-set content: good type, good pictures, good spacing, no device.
+
+**Page system:** choose two or three section patterns for this page (for example: a wide picture with a caption; a text column with a list; a full-width band) and build the plain sections from them, so the page repeats its own language instead of collecting nine borrowed layouts.
+
+For each section:
 
 - **Job:** the one thing it must get across.
-- **Layout idea:** one idea of its own, taken from an inspected MCP reference (search for the move, written from this section's content, as in step 2), with its composition study. The kind of idea meant: a sentence alone with its key words lighting up, or one picture split by a line with the claim on it. These show the kind; do not search for them as written.
+- **Role:** signature, supporting moment, or plain.
+- **Structure:** for the signature and supporting moments, one idea taken from an inspected MCP reference (search written from this section's content, as in step 2), with its composition study. For plain sections, which of the page's patterns it uses, informed by a quiet reference when one helps.
 - **Weight:** quiet or rich.
 - **Scroll:** holds the scroll (pinned, steps through) or not.
 
 Then check the plan:
 
-- **No default sections.** A heading over equal cards, a photo beside text, a heading with a button, a row of numbers, a logo strip: each is the "basic" version. Replace it with a layout idea.
+- **Plain is not basic.** A plain section is still designed: real content, the page's type and spacing, one clear hierarchy. Basic is the template version (a heading over three equal icon cards, a stats row, a logo strip): never use those.
 - **Rhythm.** No two neighbours share a shape. A quiet section follows a rich one.
-- **Calm surface.** One background family, one accent, two typefaces, the same gap between sections. The structure is bold; the surface is not.
+- **Calm surface.** One background family, one accent, two typefaces, the same gap between sections. The signature is bold; the rest is calm.
+- **No repeated skeleton.** If most sections are "heading top-left, small paragraph to the right, then a component", the page is a template. Vary the patterns as the content needs.
 - **Motion ceiling.** At most three sections hold the scroll.
 - **Real product first.** Where the business has a product, its real screens and real data are the strongest imagery; photos are secondary. If there is a working app (a URL or a folder), run it and screenshot the real screens. Draw interface only when nothing exists, and label it as sample.
 
-If the designer marks a section "basic", redesign only that section: offer three options, none of them safe, and keep the rest of the page.
+If the designer marks a section "basic" or "bad", redesign only that section: offer three options, none of them safe, and keep the rest of the page.
 
 ## Step 5 — Build
 
@@ -115,6 +123,7 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
   - *Type-led or object-led:* one headline of at most six words, one line of at most twelve words, one button.
   - *Image-, product-, structure-led or quiet:* one headline of at most ten words, at most two short sentences (about thirty words), one filled button and at most one text link.
   - *Always:* no tagline or label above the headline, no second statement. Section headings at most six words; items are names, with at most one short line where essential. When in doubt, cut.
+- **Type floor (hard):** body text at least 17px in near-black (or near-white on dark), at a normal weight. Small grey text is for captions only. Headings have real weight; avoid light and thin weights for anything a visitor must read.
 - **Type budget (hard):** one family for almost everything; a second only for one clear role; never more than two. At most three sizes per screen. The largest size is set by the idea: a quiet or image-led page does not need a poster headline.
 - Real, specific copy: short and confident. Real or credited stand-in material; honest placeholders only where nothing exists.
 - The brief wins over the reference; the reference wins over habit.

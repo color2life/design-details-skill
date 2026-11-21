@@ -114,6 +114,13 @@ function audit() {
   if (low.length) add("fail", "low contrast text", `${low.length} elements, e.g. ${low.slice(0, 4).join("; ")}`);
   if (unknown) add("warn", "text over images not measured", `${unknown} elements sit on a picture or gradient; check them by eye`);
 
+  // Body text below the floor: paragraphs and list items a visitor must read.
+  const body = [...document.querySelectorAll("p, li, dd")].filter(el => visible(el) && words(text(el)) >= 6);
+  const smallBody = body.filter(el => px(getComputedStyle(el).fontSize) < 16.5);
+  if (smallBody.length) add("warn", "body text under 17px", `${smallBody.length} of ${body.length} paragraphs, e.g. "${short(text(smallBody[0]))}" at ${Math.round(px(getComputedStyle(smallBody[0]).fontSize))}px`);
+  const thin = textEls.filter(el => /^H[1-3]$/.test(el.tagName) && Number(getComputedStyle(el).fontWeight) < 400);
+  if (thin.length) add("warn", "light or thin heading weight", `${thin.length} headings, e.g. "${short(text(thin[0]))}"`);
+
   // Tiny text.
   const tiny = textEls.filter(el => px(getComputedStyle(el).fontSize) < 12);
   if (tiny.length) add("warn", "text under 12px", `${tiny.length} elements, e.g. "${short(text(tiny[0]))}"`);

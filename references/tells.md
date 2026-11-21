@@ -42,6 +42,11 @@ Habits that make a page look generated. Each one has a move to make instead. The
 | A newsletter signup as the last thing on every page | End with the action that matters for this page. |
 | Long copy blocks, three bullet points under everything, extra explanation | Cut by half. Say it once. |
 | A section added because a template usually has one | Every section answers a question the visitor has. |
+| Every section has a trick (a slider, a split, a lit list, a dimension line, a sentence form…) | One signature move, at most two supporting moments; the rest is plain, well-set content. |
+| Each section borrowed from a different website, so the page is a collage | Two or three section patterns of the page's own, repeated; references feed the signature moments. |
+| The category costume: dark + thin serif + dusty pink for luxury, grey paper + mono labels + crop marks for tech, beige + sage for wellness | The flavour the designer chose, from real examples; never the category default by habit. |
+| Heading top-left, small grey paragraph to the right, then a component, in every section | Vary the pattern with the content; let some sections be one wide picture or one column. |
+| Body text at 12–15px in light grey, headings in light or thin weights | Body at 17px or more in near-black; headings with real weight. |
 
 ## Copy tells
 
