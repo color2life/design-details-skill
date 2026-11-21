@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.3.1-draft"
+  version: "1.4.0-draft"
 ---
 
 # Design Details
@@ -15,6 +15,19 @@ The goal is a page good enough to be featured in a design gallery, not a clean t
 
 A clean, correct, forgettable page is a failure, not a safe result.
 
+## Bold is not big
+
+Giant type is one way to be bold, and the most overused one. Pages that all end in a huge word, a few small lines and one button look alike, whatever the business. The kinds of bold:
+
+- **Type-led:** the scale and placement of the words are the idea.
+- **Image-led:** one photograph or film owns the screen; the type is modest and placed with care.
+- **Product-led:** the real product is the hero, large and working.
+- **Object-led:** one object or illustration carries the idea.
+- **Structure-led:** an unusual grid, list, sequence or interaction is the idea.
+- **Quiet:** small type, wide space and one exact detail; restraint is the move.
+
+Choose by the brief and the material, not by what looks loudest. Type should be as big as the idea needs, not as big as fits.
+
 ## Step 1 — Brief
 
 Read the project first: brand, fonts, colours, tokens, `DESIGN.md`, components, stack. Keep what exists.
@@ -24,7 +37,7 @@ Ask once, in one message, at most five questions, each with a suggested answer s
 - **Who and what:** audience, offer, the one action a visitor should take.
 - **Material:** what is real (photos, product, logo, copy), what can use free-licensed stand-ins, and what does not exist yet.
 - **Feel:** one or two words with an edge. "Clean and modern" is not a feel.
-- **Ambition:** *safe* (familiar, quiet), *distinctive* (one memorable move per screen; the default) or *extreme* (gallery-level: unusual type placement, bold cropping, layouts a typical site would never try).
+- **Ambition:** *safe* (familiar, quiet), *distinctive* (one memorable move per screen; the default) or *extreme* (gallery-level: compositions a typical site would never try, of any kind above).
 - **Scope:** which sections, and whether to see directions first (default: yes).
 
 If something is skipped, state the assumption in one line and continue. Never invent facts, numbers, customers, testimonials, awards or contact details.
@@ -53,14 +66,20 @@ Search again only to fill a named gap. Use at least a handful of searches for th
 
 ## Step 3 — Two directions, then stop
 
-Make two directions with different organising ideas. At distinctive or extreme ambition, **each direction is built around one reference's boldest move**, kept intact. Name that move in one line.
+Make two directions that **differ in kind**: two different kinds of bold from the list above, with different looks. **At most one may be type-led.** At distinctive or extreme ambition, **each direction is built around one reference's boldest move**, kept intact. Name that move in one line.
 
-For each direction, write a short plan first: the references (IDs and links), the idea in one sentence, the move it keeps, what changes for this business, the type and palette (four to six colours), the hero image use, and what the visitor reads first, second and third.
+Each direction has a **look** and a **layout**, chosen separately:
+
+- **Look:** the surface system (type pairing, palette, paper or background, how photos are treated, corners and rules), taken from one reference website's whole design with `get_website_design`.
+- **Layout:** the composition, taken from the section reference whose move it keeps. The two can come from different websites.
+
+For each direction, write a short plan first: the references (IDs and links), its kind of bold, the idea in one sentence, the move it keeps, the look and where it comes from, what changes for this business, the type and palette (four to six colours), the hero image use, and what the visitor reads first, second and third.
 
 Then two checks:
 
 - **The template check:** would a typical site in this category look like this? If yes, push the specific part further.
 - **The gallery check:** would Design Details put this opening screen in its own library? If not, it is not ready to show.
+- **The sameness check:** put the two studies side by side, and beside the last page made with this skill if you have one. If two of them share a shape (a giant word, a few small lines, one button), change one.
 
 Make a quick visual study of each direction's opening screen and show it **beside its reference images**, with the move named. Offer: A, B or **neither**.
 
@@ -81,7 +100,7 @@ Then check the plan:
 - **Rhythm.** No two neighbours share a shape. A quiet section follows a rich one.
 - **Calm surface.** One background family, one accent, two typefaces, the same gap between sections. The structure is bold; the surface is not.
 - **Motion ceiling.** At most three sections hold the scroll.
-- **Real product first.** Where the business has a product, its real screens and real data are the strongest imagery; photos are secondary.
+- **Real product first.** Where the business has a product, its real screens and real data are the strongest imagery; photos are secondary. If there is a working app (a URL or a folder), run it and screenshot the real screens. Draw interface only when nothing exists, and label it as sample.
 
 If the designer marks a section "basic", redesign only that section: offer three options, none of them safe, and keep the rest of the page.
 
@@ -92,17 +111,21 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
 - Build the hero first, render it, and put it beside its reference. Check the composition study point by point: headline position, line count, image share, empty space. The boldest move must survive. If it has softened into a familiar layout, rebuild it. If the copy is too long for the placement, shorten the copy, not the placement.
 - **Ambition survives accessibility.** When a bold move creates a problem (text on a busy photo, very large type, tight cropping), solve it with technique: a scrim, a calmer crop, larger or heavier type, a solid band behind the text. Do not retreat to the standard layout.
 - One design language across the page: the same fonts, sizes, spacing, surfaces. Each section borrows its layout from its reference, not its look.
-- **Text budget (hard):** the hero is one headline of at most six words, at most one short line of at most twelve words, and one button. No tagline above it, no second statement, no paragraph. Section headings at most four words; items are names, with at most one short line where essential. When in doubt, cut.
-- **Type budget (hard):** one family for almost everything; a second only for one clear role; never more than two. At most three sizes per screen.
+- **Text budget (hard), set by the direction's kind:**
+  - *Type-led or object-led:* one headline of at most six words, one line of at most twelve words, one button.
+  - *Image-, product-, structure-led or quiet:* one headline of at most ten words, at most two short sentences (about thirty words), one filled button and at most one text link.
+  - *Always:* no tagline or label above the headline, no second statement. Section headings at most six words; items are names, with at most one short line where essential. When in doubt, cut.
+- **Type budget (hard):** one family for almost everything; a second only for one clear role; never more than two. At most three sizes per screen. The largest size is set by the idea: a quiet or image-led page does not need a poster headline.
 - Real, specific copy: short and confident. Real or credited stand-in material; honest placeholders only where nothing exists.
 - The brief wins over the reference; the reference wins over habit.
 
 ## Step 6 — Check, then show
 
 1. Render at 1440 and 390 wide. Look at the screenshots.
-2. Go through the [review](references/review.md): the boldest move, the gallery check, craft and tells.
-3. **Designer rounds.** Run the [designer review](references/designer-review.md), ideally by a fresh helper with no memory of the build: a verdict for every section (approved, half done, weak, basic), one problem and one move for each section that is not approved, then the whole page (neighbours, rhythm, tells, small text, overlaps). Fix, re-render, review again. Protect approved sections. At most three rounds.
-4. Finish with one verdict: **ship**, **fix** or **rebuild**.
+2. Run the page checker from this skill's folder: `node scripts/check-page.mjs <page file or URL>`. Fix every **fail**; fix or explain every **warn**. It checks what a script can see (labels above headings, accent words, the type and text budgets, contrast, overflow, side-by-side filled buttons); it does not judge design.
+3. Go through the [review](references/review.md): the boldest move, the gallery check, craft and tells.
+4. **Designer rounds.** Run the [designer review](references/designer-review.md), ideally by a fresh helper with no memory of the build: a verdict for every section (approved, half done, weak, basic), one problem and one move for each section that is not approved, then the whole page (neighbours, rhythm, tells, small text, overlaps). Fix, re-render, review again. Protect approved sections. At most three rounds.
+5. Finish with one verdict: **ship**, **fix** or **rebuild**.
 
 Show the designer the screenshots beside the references, and the round records with before and after frames: the move each section kept and from where, what was checked and not checked, and the placeholders. **Stop and wait for their approval.** Their "no" is a real answer.
 

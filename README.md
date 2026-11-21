@@ -21,4 +21,5 @@ Add `https://designdetails.io/api/mcp` as a remote MCP server in your AI client.
 - `references/craft.md`, `tells.md`, `motion.md`: build rules
 - `references/review.md`, `designer-review.md`: review and designer rounds
 - `references/mcp.md`: how to use the MCP
+- `scripts/check-page.mjs`: a page checker that runs in a real browser (`npm i -D playwright && npx playwright install chromium`, then `node scripts/check-page.mjs page.html`)
 - `CREDITS.md`: open-source skills whose ideas this one learned from

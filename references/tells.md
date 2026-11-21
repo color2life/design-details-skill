@@ -34,7 +34,8 @@ Habits that make a page look generated. Each one has a move to make instead. The
 | Hero, three feature cards, a stats row, a testimonial, a call to action, in that order | Order sections by what this visitor needs to know to act. Follow the reference's structure. |
 | The default split: headline and button on the left, image in a box on the right | Let type and image interact: the headline crosses the photo, wraps around it, sits inside it, or is the image. Use the split only when a reference's move needs it. |
 | Every section a centred heading over a neat grid | Vary the placement: off-axis headings, text set low or to one side, a section that is one huge line. |
-| Safe type sizes everywhere | Commit to scale where the reference does: one enormous line, very small supporting text, real contrast between them. |
+| Safe type sizes everywhere | Give the sizes real contrast where the idea needs it. Scale is one tool, not the only one. |
+| A giant word, a few small lines and one button: the generated "bold" poster on every page | Pick the kind of bold the brief needs (image, product, object, structure, quiet, type). Use poster scale only when the words themselves are the idea. |
 | A giant number hero ("10x faster", "99.9%") | Lead with the most characteristic thing in this business: the product, the place, the work. |
 | Every section fades up as you scroll | Motion that is the section's layout idea (cards stacking, panels opening, words lighting up), in a few sections only. |
 | A drawn fake browser window or fake app screen | A real screenshot of the real product, or an honest placeholder. |

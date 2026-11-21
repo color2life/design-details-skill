@@ -39,10 +39,12 @@ After the sections, look at the page top to bottom and check:
 
 - **Blending neighbours:** two sections next to each other with the same shape or background, so they read as one.
 - **Rhythm:** a quiet section after every rich one; at most three sections hold the scroll.
+- **Checker:** the page checker's fails are fixed and its warns are fixed or explained.
 - **Tells:** small caps labels above headings, italic or coloured accent words, badges, equal three-card rows, stock gradients ([tells](tells.md)).
 - **Text and type budgets:** hero copy, section headings, more than two families or three sizes on a screen.
 - **Small text and overlaps:** text touching buttons or images, lines too small on the phone, crops that lose the subject on the phone.
 - **One language:** do the photos share one grade? Does every section look like the same site?
+- **Big for a reason:** is the largest type that big because the idea needs it, or because big looks bold? Would this page be confused with the last one made with this skill?
 
 ## 6. Rounds
 
