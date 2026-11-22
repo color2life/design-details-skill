@@ -166,9 +166,16 @@ let fails = 0;
 let warns = 0;
 for (const [name, width, height] of [["desktop", 1440, 900], ["phone", 390, 844]]) {
   const page = await browser.newPage({ viewport: { width, height } });
+  // Script errors: a crash stops tabs, menus and motion while the screenshot still looks fine.
+  const crashes = [];
+  const consoleErrors = [];
+  page.on("pageerror", e => crashes.push(e.message));
+  page.on("console", m => { if (m.type() === "error") consoleErrors.push(m.text()); });
   await page.goto(url, { waitUntil: "networkidle" });
   await page.waitForTimeout(600);
   const findings = await page.evaluate(audit);
+  if (crashes.length) findings.push({ level: "fail", rule: "script error", detail: `${crashes.length}, e.g. ${crashes[0].slice(0, 120)}` });
+  if (consoleErrors.length) findings.push({ level: "warn", rule: "console errors", detail: `${consoleErrors.length}, e.g. ${consoleErrors[0].slice(0, 120)}` });
   console.log(`\n${name} ${width}×${height}`);
   for (const f of findings) {
     console.log(`  ${f.level.toUpperCase()}  ${f.rule}${f.detail ? `: ${f.detail}` : ""}`);

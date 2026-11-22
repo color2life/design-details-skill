@@ -133,7 +133,7 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
 ## Step 6 — Check, then show
 
 1. Render at 1440 and 390 wide. Look at the screenshots.
-2. Run the page checker from this skill's folder: `node scripts/check-page.mjs <page file or URL>`. Fix every **fail**; fix or explain every **warn**. It checks what a script can see (labels above headings, accent words, the type and text budgets, page word count, contrast, overflow, side-by-side filled buttons); it does not judge design.
+2. Run the page checker from this skill's folder: `node scripts/check-page.mjs <page file or URL>`. Fix every **fail**; fix or explain every **warn**. It checks what a script can see (labels above headings, accent words, the type and text budgets, page word count, contrast, overflow, side-by-side filled buttons, script errors); it does not judge design.
 3. Go through the [review](references/review.md): the boldest move, the gallery check, craft and tells.
 4. **Designer rounds.** Run the [designer review](references/designer-review.md), ideally by a fresh helper with no memory of the build: a verdict for every section (approved, half done, weak, basic), one problem and one move for each section that is not approved, then the whole page (neighbours, rhythm, tells, small text, overlaps). Fix, re-render, review again. Protect approved sections. At most three rounds.
 5. Finish with one verdict: **ship**, **fix** or **rebuild**.
