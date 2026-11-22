@@ -77,7 +77,18 @@ function audit() {
   }
 
   // Contrast against the nearest solid background.
-  const rgba = v => (v.match(/[\d.]+/g) || []).map(Number);
+  // Any CSS colour (rgb, oklch, lab, color-mix…) to [r, g, b, alpha 0–1] in sRGB, via a 1px canvas.
+  const ctx = Object.assign(document.createElement("canvas"), { width: 1, height: 1 }).getContext("2d", { willReadFrequently: true });
+  const seen = new Map();
+  const rgba = v => {
+    if (!seen.has(v)) {
+      ctx.clearRect(0, 0, 1, 1);
+      ctx.fillStyle = "#000"; ctx.fillStyle = v; ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b, a] = ctx.getImageData(0, 0, 1, 1).data;
+      seen.set(v, [r, g, b, a / 255]);
+    }
+    return seen.get(v);
+  };
   const lum = ([r, g, b]) => {
     const c = [r, g, b].map(x => { x /= 255; return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4; });
     return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
