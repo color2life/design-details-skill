@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.5.0-draft"
+  version: "1.6.0-draft"
 ---
 
 # Design Details
@@ -35,7 +35,7 @@ Read the project first: brand, fonts, colours, tokens, `DESIGN.md`, components, 
 Ask once, in one message, at most five questions, each with a suggested answer so the designer can reply "go ahead":
 
 - **Who and what:** audience, offer, the one action a visitor should take.
-- **Material:** what is real (photos, product, logo, copy), what can use free-licensed stand-ins, and what does not exist yet.
+- **Material:** what is real (photos, product, logo, copy), what can use free-licensed stand-ins, and what does not exist yet. If the business has a product but no screens were supplied, ask how to show it: real screens (send them or a working link), polished sample screens built for the page (suggested), or photos. Never offer sketches.
 - **Flavour:** the page's look, chosen by the designer from a short menu with real examples. Follow [flavours](references/flavours.md): offer three flavours that could suit the brief and one wild card, each shown with two or three real websites from the MCP, and ask which one, or a mix of two. Never pick the category's default look on your own.
 - **Ambition:** *safe* (familiar, quiet), *distinctive* (one memorable move per screen; the default) or *extreme* (gallery-level: compositions a typical site would never try, of any kind above).
 - **Scope:** which sections, and whether to see directions first (default: yes).
@@ -108,7 +108,8 @@ Then check the plan:
 - **Calm surface.** One background family, one accent, two typefaces, the same gap between sections. The signature is bold; the rest is calm.
 - **No repeated skeleton.** If most sections are "heading top-left, small paragraph to the right, then a component", the page is a template. Vary the patterns as the content needs.
 - **Motion ceiling.** At most three sections hold the scroll.
-- **Real product first.** Where the business has a product, its real screens and real data are the strongest imagery; photos are secondary. If there is a working app (a URL or a folder), run it and screenshot the real screens. Draw interface only when nothing exists, and label it as sample.
+- **Real product first.** Where the business has a product, its real screens and real data are the strongest imagery; photos are secondary. If there is a working app (a URL or a folder), run it and screenshot the real screens.
+- **No screens? Build polished samples, not sketches.** When nothing real exists (and the designer chose or did not answer), build sample screens in HTML at shipped-product quality: real type sizes, realistic data and names, the page's surfaces, quiet depth (a soft shadow or a paper edge), shown as objects on the page with no browser frame. Label them "Sample". Never show the product as line drawings, wireframe boxes, annotated diagrams or illustration unless the designer asks for it or chose the Playful flavour: they read as unfinished.
 
 If the designer marks a section "basic" or "bad", redesign only that section: offer three options, none of them safe, and keep the rest of the page.
 
@@ -123,6 +124,7 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
   - *Type-led or object-led:* one headline of at most six words, one line of at most twelve words, one button.
   - *Image-, product-, structure-led or quiet:* one headline of at most ten words, at most two short sentences (about thirty words), one filled button and at most one text link.
   - *Always:* no tagline or label above the headline, no second statement. Section headings at most six words; items are names, with at most one short line where essential. When in doubt, cut.
+  - *Whole page:* about 450 visible words at most (nav, footer and legal lines not counted), about 60 per screen. At most three testimonials, one quote per section. When the supplied copy is longer, cut whole sections first, keeping those that answer a question the visitor has; then shorten what is left. List every cut for the designer. Less copy is the default, even when the designer supplied all of it.
 - **Type floor (hard):** body text at least 17px in near-black (or near-white on dark), at a normal weight. Small grey text is for captions only. Headings have real weight; avoid light and thin weights for anything a visitor must read.
 - **Type budget (hard):** one family for almost everything; a second only for one clear role; never more than two. At most three sizes per screen. The largest size is set by the idea: a quiet or image-led page does not need a poster headline.
 - Real, specific copy: short and confident. Real or credited stand-in material; honest placeholders only where nothing exists.
@@ -131,7 +133,7 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
 ## Step 6 — Check, then show
 
 1. Render at 1440 and 390 wide. Look at the screenshots.
-2. Run the page checker from this skill's folder: `node scripts/check-page.mjs <page file or URL>`. Fix every **fail**; fix or explain every **warn**. It checks what a script can see (labels above headings, accent words, the type and text budgets, contrast, overflow, side-by-side filled buttons); it does not judge design.
+2. Run the page checker from this skill's folder: `node scripts/check-page.mjs <page file or URL>`. Fix every **fail**; fix or explain every **warn**. It checks what a script can see (labels above headings, accent words, the type and text budgets, page word count, contrast, overflow, side-by-side filled buttons); it does not judge design.
 3. Go through the [review](references/review.md): the boldest move, the gallery check, craft and tells.
 4. **Designer rounds.** Run the [designer review](references/designer-review.md), ideally by a fresh helper with no memory of the build: a verdict for every section (approved, half done, weak, basic), one problem and one move for each section that is not approved, then the whole page (neighbours, rhythm, tells, small text, overlaps). Fix, re-render, review again. Protect approved sections. At most three rounds.
 5. Finish with one verdict: **ship**, **fix** or **rebuild**.

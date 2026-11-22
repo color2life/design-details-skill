@@ -37,6 +37,7 @@ A move that would fit any page is not a move. If the section needs a new layout 
 
 After the sections, look at the page top to bottom and check:
 
+- **Does it look finished and expensive?** Would it pass as a shipped site at this company's level? Mark any section that looks sketched, wireframe-like or like a text document "half done", and say what would finish it (a polished sample screen, a real photo, fewer words).
 - **Does it feel generated?** Answer honestly, and point at the part that does: too many tricks, a category costume, the same skeleton in every section, small grey text, stand-in pictures that do not match. This question comes first.
 - **Move budget:** one signature move and at most two supporting moments. If more sections carry a device, take the weakest devices out and set those sections plainly. A good review often removes ideas rather than adding them.
 - **Flavour:** does every section wear the chosen flavour, or has a section reference brought its own look in?
@@ -45,7 +46,7 @@ After the sections, look at the page top to bottom and check:
 - **Rhythm:** a quiet section after every rich one; at most three sections hold the scroll.
 - **Checker:** the page checker's fails are fixed and its warns are fixed or explained.
 - **Tells:** small caps labels above headings, italic or coloured accent words, badges, equal three-card rows, stock gradients ([tells](tells.md)).
-- **Text and type budgets:** hero copy, section headings, more than two families or three sizes on a screen.
+- **Text and type budgets:** hero copy, section headings, the page's word count (about 450) and words per screen (about 60), more than two families or three sizes on a screen. If the page reads long, name the sections to cut.
 - **Small text and overlaps:** text touching buttons or images, lines too small on the phone, crops that lose the subject on the phone.
 - **One language:** do the photos share one grade? Does every section look like the same site?
 - **Big for a reason:** is the largest type that big because the idea needs it, or because big looks bold? Would this page be confused with the last one made with this skill?

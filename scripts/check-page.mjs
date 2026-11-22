@@ -46,6 +46,20 @@ function audit() {
   const sizes = new Set(firstScreen.map(el => Math.round(px(getComputedStyle(el).fontSize))));
   if (sizes.size > 3) add("warn", "more than three type sizes on the first screen", [...sizes].sort((a, b) => a - b).join(", ") + " px");
 
+  // Page copy: visible words outside nav, header and footer; and the fullest screen.
+  const ownWords = el => [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join(" ").trim().split(/\s+/).filter(w => /\w/.test(w)).length;
+  const copyEls = textEls.filter(el => !el.closest("nav, header, footer, [aria-hidden='true']"));
+  const pageWords = copyEls.reduce((n, el) => n + ownWords(el), 0);
+  if (pageWords > 600) add("fail", "too much copy", `${pageWords} visible words (aim for about 450; cut whole sections first)`);
+  else if (pageWords > 450) add("warn", "copy over 450 words", `${pageWords} visible words; cut sections the visitor does not need`);
+  const bands = new Map();
+  for (const el of copyEls) {
+    const band = Math.floor((el.getBoundingClientRect().top + scrollY) / innerHeight);
+    bands.set(band, (bands.get(band) || 0) + ownWords(el));
+  }
+  const [fullBand, fullWords] = [...bands].sort((a, b) => b[1] - a[1])[0] || [0, 0];
+  if (fullWords > 80) add("warn", "busy screen", `${fullWords} words on screen ${fullBand + 1} (aim for about 60)`);
+
   // Hero headline length.
   const h1 = [...document.querySelectorAll("h1")].find(visible);
   if (!h1) add("warn", "no visible h1", "");
