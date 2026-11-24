@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.6.0-draft"
+  version: "1.7.0-draft"
 ---
 
 # Design Details
@@ -32,11 +32,13 @@ Choose by the brief and the material, not by what looks loudest. Type should be 
 
 Read the project first: brand, fonts, colours, tokens, `DESIGN.md`, components, stack. Keep what exists.
 
+Read the **look log**, `design-details-looks.json` in the project root, if there is one. It lists the last pages made with this skill: flavour, fonts, colours, hero shape, main object, references. Read the list only; do not open the old pages. This page must not reuse a font, hero shape, main object, reference or flavour version from its last five entries, or the last entry's flavour, unless the brand or the designer asks for it.
+
 Ask once, in one message, at most five questions, each with a suggested answer so the designer can reply "go ahead":
 
 - **Who and what:** audience, offer, the one action a visitor should take.
 - **Material:** what is real (photos, product, logo, copy), what can use free-licensed stand-ins, and what does not exist yet. If the business has a product but no screens were supplied, ask how to show it: real screens (send them or a working link), polished sample screens built for the page (suggested), or photos. Never offer sketches.
-- **Flavour:** the page's look, chosen by the designer from a short menu with real examples. Follow [flavours](references/flavours.md): offer three flavours that could suit the brief and one wild card, each shown with two or three real websites from the MCP, and ask which one, or a mix of two. Never pick the category's default look on your own.
+- **Flavour:** the page's look, chosen by the designer from a short menu with real examples. Follow [flavours](references/flavours.md): offer three flavours that could suit the brief and one wild card, each shown with two or three real websites from the MCP, and ask which one, or a mix of two. Never pick the category's default look on your own; when the designer says "you choose", the script draws it, not you.
 - **Ambition:** *safe* (familiar, quiet), *distinctive* (one memorable move per screen; the default) or *extreme* (gallery-level: compositions a typical site would never try, of any kind above).
 - **Scope:** which sections, and whether to see directions first (default: yes).
 
@@ -44,7 +46,7 @@ Show the flavour menu in the same message as the questions. If something else is
 
 ## Step 2 — Hunt for the boldest references
 
-If the MCP is not connected, say so, explain how to add `https://designdetails.io/api/mcp`, and ask whether to continue without references. Without it, do not claim reference-backed choices.
+If the MCP is not connected, say so, explain how to add `https://designdetails.io/api/mcp`, and ask whether to continue without references. Without it, do not claim reference-backed choices: skip the searches, use the flavour version's description as the look, and write the composition study for your own idea.
 
 With it connected, follow [the MCP guide](references/mcp.md). Search two ways:
 
@@ -66,6 +68,8 @@ Search again only to fill a named gap. Use at least a handful of searches for th
 
 ## Step 3 — Two directions, then stop
 
+**Drop the first idea.** Before searching or sketching an opening, write five hero ideas, one line each, with different main objects and at least three different shapes. Then name the one most designers given this brief would think of first (usually the headline's wording, or the product's most obvious object, acted out) and cross it out, along with any that repeats the look log. Both directions come from what is left, with different shapes and different main objects. A quiet or plain idea is allowed to win.
+
 Make two directions that **differ in kind**: two different kinds of bold from the list above. **At most one may be type-led.** Both use the **chosen flavour**; they differ in layout and in their one signature move. At distinctive or extreme ambition, **each direction is built around one reference's boldest move**, kept intact. Name that move in one line.
 
 Each direction has a **look** and a **layout**, chosen separately:
@@ -79,7 +83,7 @@ Then two checks:
 
 - **The template check:** would a typical site in this category look like this? If yes, push the specific part further.
 - **The gallery check:** would Design Details put this opening screen in its own library? If not, it is not ready to show.
-- **The sameness check:** put the two studies side by side, and beside the last page made with this skill if you have one. If two of them share a shape (a giant word, a few small lines, one button), change one.
+- **The sameness check:** put the two studies side by side, then run `node scripts/look-log.mjs check design-details-looks.json <look file>` for each (the script's first lines show the file's fields). If the two share a shape, or the script reports a repeat the brand or designer did not ask for, change it. The script matches words; also ask whether the opening would look like a logged one to someone who saw both.
 
 Make a quick visual study of each direction's opening screen and show it **beside its reference images**, with the move named. Offer: A, B or **neither**.
 
@@ -139,6 +143,8 @@ Build the chosen direction in the project's stack. Read [craft](references/craft
 5. Finish with one verdict: **ship**, **fix** or **rebuild**.
 
 Show the designer the screenshots beside the references, and the round records with before and after frames: the move each section kept and from where, what was checked and not checked, and the placeholders. **Stop and wait for their approval.** Their "no" is a real answer.
+
+Once the page is finished, record its look: `node scripts/look-log.mjs add design-details-looks.json <look file>`.
 
 ## Honesty
 
