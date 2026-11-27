@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Keeps a short record of each page's look so the next page does not repeat it.
-//   node look-log.mjs pick  <log.json> swiss/museum editorial/fashion raw/ticket
+//   node look-log.mjs pick  <log.json> [--not swiss/poster] [--not raw/zine]   (draws from every version)
 //   node look-log.mjs check <log.json> <look.json>
 //   node look-log.mjs add   <log.json> <look.json>
 // look.json: {"page","flavour":"editorial/fashion","fonts":[],"colours":[],"heroShape","heroObject":["receipt","card"],"references":[]}
@@ -10,7 +10,12 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { randomInt } from "node:crypto";
 
 const REMEMBER = 5;
-const SHAPES = ["full-bleed-picture", "text-beside-object", "split-around-object", "centred-stack", "object-alone", "text-low", "cell-grid", "list-or-index", "sequence", "collage", "narrow-column", "product-surface", "giant-word"];
+const SHAPES = ["full-bleed-picture", "text-beside-object", "split-around-object", "centred-stack", "object-alone", "text-low", "cell-grid", "list-or-index", "sequence", "collage", "narrow-column", "product-surface", "giant-word", "enlarged-row"];
+const VERSIONS = {
+  editorial: ["newspaper", "catalogue", "report", "fashion"], swiss: ["poster", "timetable", "museum", "signage"],
+  "warm-craft": ["workshop", "packaging", "kitchen", "textile"], raw: ["ticket", "index", "zine", "utility"],
+  playful: ["sticker", "toy", "comic", "game"], atmospheric: ["film", "night", "weather", "gallery"],
+};
 const FIELDS = ["flavour", "fonts", "heroShape", "heroObject", "references"];
 const norm = (v) => String(v).trim().toLowerCase().replace(/\s+/g, " ");
 const list = (v) => (Array.isArray(v) ? v : v ? [v] : []).map(norm);
@@ -21,7 +26,7 @@ const read = (path) => {
 };
 
 const [command, logPath, ...rest] = process.argv.slice(2);
-if (!["pick", "check", "add"].includes(command) || !logPath || !rest.length) stop("Use: look-log.mjs pick <log> <flavour/version>... | check <log> <look> | add <log> <look>");
+if (!["pick", "check", "add"].includes(command) || !logPath || (command !== "pick" && !rest.length)) stop("Use: look-log.mjs pick <log> [--not <flavour/version>] (two at most) | check <log> <look> | add <log> <look>");
 const log = existsSync(logPath) ? read(logPath) : [];
 if (!Array.isArray(log)) stop(`${logPath} must hold a list.`);
 const recent = log.slice(-REMEMBER);
@@ -29,8 +34,16 @@ const recent = log.slice(-REMEMBER);
 if (command === "pick") {
   const last = family(recent.at(-1)?.flavour);
   const used = new Set(recent.map((l) => norm(l.flavour ?? "")));
-  const options = [...new Set(rest.map(norm))].filter((o) => family(o) !== last && !used.has(o));
-  if (!options.length) stop("Every option repeats a recent page. Offer other flavours or versions.");
+  const not = [];
+  for (let i = 0; i < rest.length; i += 2) {
+    if (rest[i] !== "--not" || !rest[i + 1]) stop("Use: pick <log> [--not <flavour/version>] (two at most)");
+    not.push(norm(rest[i + 1]));
+  }
+  if (not.length > 2) stop("At most two exclusions.");
+  const all = Object.entries(VERSIONS).flatMap(([f, vs]) => vs.map((v) => `${f}/${v}`));
+  for (const n of not) if (!all.includes(n)) stop(`Unknown version: ${n}. One of: ${all.join(", ")}`);
+  const options = all.filter((o) => !not.includes(o) && family(o) !== last && !used.has(o));
+  if (!options.length) stop("Every option repeats a recent page.");
   // Choose the flavour first, so listing more versions of one does not favour it.
   const families = [...new Set(options.map(family))];
   const chosen = families[randomInt(families.length)];

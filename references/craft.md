@@ -7,7 +7,7 @@ The floor is not the ceiling. These rules make a bold design work; they are neve
 ## Tokens
 
 - Every colour, font, radius and shadow is a custom property on `:root`, defined once. No loose hex values in components.
-- One or two type families. A clear scale: few sizes, each with a job. At most three sizes above the fold.
+- One or two type families. A clear scale: few sizes, each with a job. Five type roles at most ([layout](layout.md)).
 - Set `color-scheme` and `theme-color` so browser controls match the page.
 - Theme the small surfaces too: text selection, focus rings, scrollbars where visible.
 
@@ -25,7 +25,7 @@ The floor is not the ceiling. These rules make a bold design work; they are neve
 - The headline, the supporting line and the main action are visible on the first screen at 1280 × 800 and on a phone.
 - A content container with a maximum width that still looks right at 1920 wide.
 - Group with space and alignment before reaching for borders, boxes or rules.
-- Vary section spacing with the content. Identical gaps everywhere read as a template.
+- One space between sections, held through the page; vary the arrangement inside, not the gap ([layout](layout.md)).
 - No horizontal scroll: use `overflow-x: clip`, never `100vw` widths.
 - Use `min-height: 100dvh`, not `100vh`, for full-screen sections.
 - Images have explicit width and height (or aspect ratio) so nothing jumps. Lazy-load images below the first screen.

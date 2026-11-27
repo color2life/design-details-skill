@@ -2,7 +2,7 @@
 
 Use in step 6, after the page is built and rendered. This is the review a senior designer gives in a critique: section by section, from the screenshots, with one clear move per problem. It is what turned the test pages from "good start" into pages worth showing (Crumb & Co and Saltbath, November 2026).
 
-The reviewer is ideally a fresh helper with no memory of the build. Give it only: the brief, the direction's one-line idea, the section plan, the reference images, the screenshots and this page. If no helper is available, do it yourself, and say so.
+The reviewer is ideally a fresh helper with no memory of the build. Give it only: the brief, the fact sheet, the direction's one-line idea, the section plan, the reference images, the screenshots and this page. If no helper is available, do it yourself, and say so.
 
 ## 1. Look first
 
@@ -13,7 +13,7 @@ The reviewer is ideally a fresh helper with no memory of the build. Give it only
 
 Give each section one of four verdicts:
 
-- **Approved:** it does its job in the page's own language and nothing important is wrong. For the signature and supporting moments, the move is carried through; for plain sections, the type, pictures and spacing are simply good. Leave it alone.
+- **Approved:** it does its job in the page's own language and nothing important is wrong. For the signature and supporting moments, the move is carried through; for the others, the content itself is what you see, and its type and spacing are good. Leave it alone.
 - **Half done:** the idea is right, but it is not carried through (the photo is a small box when the idea needs it full-bleed; the giant word is not giant enough).
 - **Weak:** it has an idea, but the wrong one for this page, or a repeat of a neighbour or of another site's section.
 - **Basic:** it is the default version (heading over equal cards, photo beside text, heading and button, row of numbers, ruled list).
@@ -39,17 +39,18 @@ After the sections, look at the page top to bottom and check:
 
 - **Does it look finished and expensive?** Would it pass as a shipped site at this company's level? Mark any section that looks sketched, wireframe-like or like a text document "half done", and say what would finish it (a polished sample screen, a real photo, fewer words).
 - **Does it feel generated?** Answer honestly, and point at the part that does: too many tricks, a category costume, the same skeleton in every section, small grey text, stand-in pictures that do not match. This question comes first.
-- **Move budget:** one signature move and at most two supporting moments. If more sections carry a device, take the weakest devices out and set those sections plainly. A good review often removes ideas rather than adding them.
+- **Calm:** is there one focus on every screen of the squint frames? Name each tie. Are the spaces between sections even, do headings share two or three left edges, are there at most two strong bands besides the signature? Name what could be removed without loss, on each screen.
 - **Flavour:** does every section wear the chosen flavour, or has a section reference brought its own look in?
 
+- **Facts:** every state, number, name, date and time seen in the frames matches the fact sheet, drawings included. One wrong fact means the verdict cannot be ship. A fact that "may read as" something else is wrong, key or no key.
+- **Samples:** labelled with the one word, none in the opening.
+- **The object:** does it carry a true fact, and come back at least twice as a mark with new, true facts, smaller? For an app: does the first screen show what it does?
 - **Blending neighbours:** two sections next to each other with the same shape or background, so they read as one.
 - **Rhythm:** a quiet section after every rich one; at most three sections hold the scroll.
-- **Checker:** the page checker's fails are fixed and its warns are fixed or explained.
 - **Tells:** small caps labels above headings, italic or coloured accent words, badges, equal three-card rows, stock gradients ([tells](tells.md)).
-- **Text and type budgets:** hero copy, section headings, the page's word count (about 450) and words per screen (about 60), more than two families or three sizes on a screen. If the page reads long, name the sections to cut.
+- **Support:** every explanation touches what it explains and is at least lead size beside big type.
 - **Small text and overlaps:** text touching buttons or images, lines too small on the phone, crops that lose the subject on the phone.
 - **One language:** do the photos share one grade? Does every section look like the same site?
-- **Big for a reason:** is the largest type that big because the idea needs it, or because big looks bold? Would this page be confused with the last one made with this skill?
 
 ## 6. Rounds
 

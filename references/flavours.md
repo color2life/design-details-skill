@@ -22,7 +22,7 @@ Each flavour has several versions that look clearly different. Choose a version,
 | **Editorial** | `newspaper` (narrow columns, condensed headlines, black on white) · `catalogue` (art book: small type, big plates, numbered works) · `report` (annual report: figures set large in plain sans, deep solid ground) · `fashion` (high-contrast display face, tight crops, stark black and white) |
 | **Swiss** | `poster` (one large flat shape of colour) · `timetable` (rows, columns and times as the design) · `museum` (small type, huge empty white) · `signage` (arrows, bold colour bands, very legible) |
 | **Warm craft** | `workshop` (tools, hands, raw material) · `packaging` (labels, stamps, coloured card stock) · `kitchen` (daylight, tiles, painted colour) · `textile` (woven pattern, stitched edges, rich dye) |
-| **Raw** | `ticket` (receipts, perforations, plain print) · `index` (a bare list as the page) · `zine` (photocopy contrast, pasted blocks) · `utility` (form fields and tables left plain) |
+| **Raw** | `ticket` (receipts, perforations, plain print) · `index` (one long list as the page, its entries very large) · `zine` (photocopy contrast, pasted blocks) · `utility` (forms, labels and instructions as architecture, at confident size) |
 | **Playful** | `sticker` (cut-outs on flat colour) · `toy` (rounded solid shapes, primary colours) · `comic` (panels and thick outlines) · `game` (pieces, boards, moves) |
 | **Atmospheric** | `film` (full-bleed stills, caption-size type) · `night` (dark ground, one light source) · `weather` (sky, haze, changing colour) · `gallery` (one lit object in a coloured room) |
 
@@ -33,7 +33,7 @@ These are starting points, not themes. The designer can mix two ("Swiss with war
 1. From the brief, choose **three flavours that could suit it and one wild card** that the category would never use. The category default may be one of the three only if the designer's words point to it.
 2. For each, find **two or three real websites in the MCP** that show it: search with your own words for the flavour as it would look on screen (not the flavour name), or browse `list_websites`, then confirm with `get_website_design` and the images. Show the images, not a description.
 3. Ask: "Which flavour, or a mix of two?" One line per option: its name, what it would mean for this business, and the sites shown.
-4. If the designer says "you choose", do not choose: list two versions of each flavour on your menu that could suit the brief (leave out the category default) and let the script draw one: `node scripts/look-log.mjs pick design-details-looks.json swiss/museum swiss/signage editorial/fashion …`. Keep the first draw; do not draw again until you like it. If it truly cannot suit the brand, say why, remove that option and draw once more.
+4. If the designer says "you choose", do not choose and do not build the pool: the script holds every version and draws one. `node scripts/look-log.mjs pick design-details-looks.json`. You may exclude at most two that truly cannot suit the visitor, with a reason each, before drawing: `--not playful/game`. Keep the first draw.
 5. Without the MCP, describe each version in one line instead of showing sites.
 
 ## How it is used
