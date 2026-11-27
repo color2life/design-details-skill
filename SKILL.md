@@ -2,7 +2,7 @@
 name: design-details
 description: Design and build an original, ambitious website page with the designer in the loop, using real reference sections from the Design Details MCP. Use when a designer asks for a new landing page, homepage, marketing page or a substantial redesign of one. Not for small styling fixes, app flows or copying a website.
 metadata:
-  version: "1.10.0"
+  version: "1.10.1"
 ---
 
 # Design Details

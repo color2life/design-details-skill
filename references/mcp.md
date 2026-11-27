@@ -10,7 +10,8 @@ Usage is limited per visitor per hour and per day. A limit returns an error that
 
 | Need | Tool |
 |---|---|
-| A new page or page opening | `create_page_recipe` first |
+| The opening and every composition | `search_sections`, searching for the composition first |
+| Job sections (pricing, booking, team, contact) | `create_page_recipe` |
 | One section or component | `search_sections` |
 | See a reference image | `get_section_preview` |
 | Measured spacing, type, layout and recorded motion for one section | `get_section_build_blueprint` |
@@ -21,6 +22,8 @@ Usage is limited per visitor per hour and per day. A limit returns an error that
 Fetch the blueprint for every reference you build from: its measured type sizes, line breaks, spacing and placement are what make a bold move work. Skip deeper calls for references you rejected.
 
 ## `create_page_recipe`
+
+For job sections only; it ranks by fit for the job and does not choose an opening or look.
 
 - `brief`: the designer's brief in their own words. Do not rewrite it into style words.
 - `slots`: the sections asked for, such as `["hero", "features", "pricing"]`.
@@ -36,6 +39,8 @@ Search two ways:
 - **For the job:** describe the section's role and this business's content.
 
 Never reuse a query from this guide or an earlier project: the same words return the same results. Set `limit: 20` (the default is 6), look past the top three, and use each website at most once per page. Send several differently worded searches for the same idea; different words reach different parts of the library.
+
+Each result is a short card (name, site, layout, builder's note, image); add `detail: "full"` for scores and match reasons when you need them.
 
 Avoid mood words alone ("modern", "premium"); they match everything. Results carry an evidence level:
 
